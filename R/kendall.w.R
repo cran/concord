@@ -65,7 +65,13 @@ kendall.w <- function (x,lambda=NULL,descending=TRUE,ranks=FALSE) {
  col.width<-max(nchar(cnames))
  if(col.width <= max.lambda.len) col.width<-max.lambda.len+1
  cnames<-formatC(cnames,width=col.width)
- if(ranks) rank.mat<-x
+ if(ranks) {
+  # check that all rows sum to the same value
+  xsums<-rowSums(x)
+  if(!all(xsums == xsums[1]))
+   stop("Differing row sums - will not compute properly.")
+  rank.mat<-x
+ }
  else {
   meanscore<-sapply(x,mean)
   rank.mat <- t(as.matrix(x))
@@ -118,7 +124,7 @@ print.kendall.w<-function(x,...) {
   plabel<-paste("  p(X2[",x$x2df,"]) =",sep="",collapse="")
   cat(plabel,x$p.chisq,"\n\n")
  }
- else cat("  p(table) =",x$p.table,"\n\n")
+ else cat("  p(table) ",x$p.table,"\n\n")
  if(!is.null(x$zstat)) {
   col.width<-ifelse(is.null(x$cnames),8,max(nchar(x$cnames)))
   cat("Contrasts\n")

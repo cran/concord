@@ -38,4 +38,12 @@
 \author{Jim Lemon}
 \note{Kendall's W may not be appropriate for nominal class data.}
 \seealso{\code{\link{kripp.alpha}},\code{\link{cohen.kappa}}}
+\examples{
+ # fictional rankings of job applicants
+ app.mat<-matrix(c(1,3,4,2,6,5,2,4,3,1,5,6,3,2,5,1,5,4),nrow=3,byrow=TRUE)
+ # Test the hypothesis that the first three applicants are ranked higher
+ # than the last three.
+ lambda<-c(1,1,1,-1,-1,-1)
+ print(kendall.w(app.mat,lambda))
+}
 \keyword{misc}

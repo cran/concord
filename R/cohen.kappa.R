@@ -82,6 +82,7 @@ cohen.kappa<-function(classif,type=c("score","count")) {
  else {
   Kc<-NA
   Zc<-NA
+  pc<-NA
  }
  varKsc<-(2/(N*k[1]*(k[1]-1)))*
   (PEsc-(2*k[1]-3)*PEsc^2+2*(k[1]-2)*sum(pj^3))/(1-PEsc)^2
@@ -106,7 +107,7 @@ print.cohen.kappa<-function(x,...) {
  cat(paste("kappa (2*PA-1) =",signif(x$kappa.bbc),"\n\n"))
 }
 
-# wtpc calculates the weighted percentages using the following formula:
+# wtpc calculates weighted percentages using the following formula:
 # <weighted pc><-(100/<n methods>)*<n ratings>/<n data objects>
 # The format of the data is the same as that used for calculating the
 # kappa for nominal data cohen.kappa()
