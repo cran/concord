@@ -1,8 +1,8 @@
 \name{mcnemar.mh}
 \alias{mcnemar.mh}
-\title{kappa reliability coefficient for nominal data}
+\title{2 way reliability coefficient for nominal data}
 \description{
- calculates the kappa coefficient of reliability for nominal data
+ calculates a coefficient of reliability for nominal data
 }
 \usage{
 mcnemar.mh(x)
