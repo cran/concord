@@ -1,5 +1,5 @@
 # lookup table for alpha=0.05 critical values for Kendall's W
-# lookup for small N and k starts at [3,3], so use offset of 2
+# lookup for small N and k starts at [3,3], so use offset of -2 to read
 Wcrit05<-matrix(
  c(NA,NA,NA,NA,NA,.376,.333,.3,.275,.25,.232,.214,.2,.187,.176,.166,.158,.15,
    NA,.619,.501,.421,.369,.318,.287,.256,.232,.222,.204,.188,.171,.160,.151,.143,.136,.129,

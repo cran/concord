@@ -29,9 +29,9 @@ kendall.w(x,lambda,descending=TRUE,ranks=FALSE)
  be returned.
 }
 \value{
-  \item{W}{value of W}
-  \item{p.table}{whether the obtained W exceeded the table value for small N}
-  \item{p.chisq}{the probability of the obtained chi-squared value for larger N}
+ \item{W}{value of W}
+ \item{p.table}{whether the obtained W exceeded the table value for small N}
+ \item{p.chisq}{the probability of the obtained chi-squared value for larger N}
 }
 \references{Siegel, S. & Castellan, N.J.Jr. (1988) Nonparametric
  statistics for the behavioral sciences. Boston, MA: McGraw-Hill.}

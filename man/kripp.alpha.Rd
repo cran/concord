@@ -2,10 +2,10 @@
 \alias{kripp.alpha}
 \title{calculate Krippendorff's alpha reliability coefficient}
 \description{
- calculates the alpha coefficient of reliability proposed by Krippendorff.
+ calculates the alpha coefficient of reliability proposed by Krippendorff
 }
 \usage{
-kripp.alpha(x, method="nominal"))
+ kripp.alpha(x, method="nominal"))
 }
 \arguments{
   \item{x}{classifier by object matrix of classifications}
@@ -14,14 +14,16 @@ kripp.alpha(x, method="nominal"))
 \details{
 }
 \value{
-  \item{statistic}{value of alpha}
-  \item{coincidence.matrix}{the concordance/discordance matrix
-   used in the calculation of alpha}
-  \item{data.values}{a character vector of the unique data values}
-  \item{nmatchval}{the count of matches, used in calculation}
+ \item{statistic}{value of alpha}
+ \item{coincidence.matrix}{the concordance/discordance matrix
+  used in the calculation of alpha}
+ \item{data.values}{a character vector of the unique data values}
+ \item{nmatchval}{the count of matches, used in calculation}
 }
-\references{Krippendorff, K. (1980) Content analysis: An introduction to
- its methodology. Beverly Hills, CA: Sage.}
+\references{
+ Krippendorff, K. (1980) Content analysis: An introduction to
+  its methodology. Beverly Hills, CA: Sage.
+}
 \author{Jim Lemon}
 \note{Krippendorff's alpha coefficient is particularly useful where
  the level of measurement of classification data is higher than nominal

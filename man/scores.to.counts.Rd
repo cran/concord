@@ -3,8 +3,7 @@
 \title{transform a score matrix to a count matrix}
 \description{
  transforms an object by classifier matrix of classification scores to
- an object by category matrix of classification counts as used by
- \code{cohen.kappa}.
+ an object by category matrix of classification counts
 }
 \usage{
 scores.to.counts(scores)

@@ -31,6 +31,7 @@ coincidence.matrix<-function(x) {
 kripp.alpha<-function(x,method="nominal") {
  if(!missing(x)) {
   cm<-coincidence.matrix(x)
+  cm$data.level<-method
   dimcm<-dim(cm$coincidence.matrix)
   # upper triangle of the coincidence matrix as a vector
   utcm<-as.vector(cm$coincidence.matrix[upper.tri(cm$coincidence.matrix)])
@@ -69,10 +70,18 @@ kripp.alpha<-function(x,method="nominal") {
    }
   }
   cm$statistic<-1-(cm$nmatchval-1)*sum(utcm*diff2)/sum(ncnk*diff2)
+  class(cm)<-"kripp.alpha"
   return(cm)
  }
  else {
   cat("Usage: kripp.alpha(x,method=c(\"nominal\",\"ordinal\",\"interval\",\"ratio\"))\n")
   cat("\twhere x is a classifier by object matrix of classifications\n\n")
  }
+}
+
+print.kripp.alpha<-function(x,...) {
+ ka.label<-
+  paste("\nKrippendorff's alpha (data level - ",cm$data.level,") =",
+   sep="",collapse="")
+ cat(ka.label,x$statistic,"\n\n")
 }

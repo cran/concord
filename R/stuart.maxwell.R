@@ -39,7 +39,10 @@ stuart.maxwell.mh<-function(x) {
     }
    }
    smstat<-t(smd)%*%solve(smS)%*%smd
-   return(list(statistic=smstat,p=1-pchisq(smstat,Kminus1)))
+   p=1-pchisq(smstat,Kminus1)
+   s.m<-list(statistic=smstat,p=p,df=Kminus1)
+   class(s.m)<-"stewart.maxwell"
+   return(s.m)
   }
   else cat("Dimension higher than 2, cannot compute\n")  
  }
@@ -48,4 +51,10 @@ stuart.maxwell.mh<-function(x) {
   cat("\twhere x is an nx2 matrix or data frame of category scores for n objects\n")
   cat("\tor a CxC matrix or data frame of rater agreement on C categories\n")
  }
+}
+
+print.stuart.maxwell<-function(x,...) {
+ cat("\nStuart-Maxwell marginal homogeneity test\n")
+ plabel<-paste(" p(x2[",x$df,"]) =",sep="",collapse="")
+ cat(x$statistic,plabel,x$p,"\n\n")
 }
