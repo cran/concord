@@ -39,6 +39,24 @@ kendall.w <- function (x,lambda=NULL,descending=TRUE,ranks=FALSE) {
   stop("Usage: kendall.w(x,lambda=NULL,descending=TRUE,ranks=FALSE)")
  if (!is.data.frame(x) && !is.matrix(x))
   stop("x must be a dataframe or matrix")
+ # lookup table for alpha=0.01 critical values for Kendall's W
+ # lookup for small N and k starts at [3,3], so use offset of -2 to read
+ Wcrit01<-matrix(
+  c(NA,NA,NA,NA,NA,.522,.469,.425,.392,.359,.335,.311,.291,.274,.26,.245,.233,.221,
+    NA,.768,.644,.553,.491,.429,.39,.351,.328,.306,.284,.262,.24,.227,.216,.204,.193,.182,
+    .84,.683,.571,.489,.434,.379,.344,.309,.289,.269,.25,.23,.211,.2,.19,.18,.17,.16,
+    .78,.629,.524,.448,.397,.347,.314,.282,.264,.246,.228,.21,.193,.183,.173,.164,.155,.146,
+    .737,.592,.491,.419,.371,.324,.293,.263,.246,.229,.212,.195,.179,.169,.16,.152,.144,.136),
+    nrow=5,byrow=TRUE)
+ # lookup table for alpha=0.05 critical values for Kendall's W
+ # lookup for small N and k starts at [3,3], so use offset of -2 to read
+ Wcrit05<-matrix(
+  c(NA,NA,NA,NA,NA,.376,.333,.3,.275,.25,.232,.214,.2,.187,.176,.166,.158,.15,
+    NA,.619,.501,.421,.369,.318,.287,.256,.232,.222,.204,.188,.171,.160,.151,.143,.136,.129,
+    .716,.552,.449,.378,.333,.287,.259,.231,.212,.195,.180,.167,.155,.147,.139,.131,.124,.117,
+    .66,.512,.417,.351,.305,.267,.24,.215,.201,.186,.172,.158,.145,.137,.13,.123,.116,.109,
+    .624,.484,.395,.333,.29,.253,.228,.204,.19,.176,.163,.15,.137,.13,.123,.116,.109,.103),
+    nrow=5,byrow=TRUE)
  datadim<-dim(x)
  if(is.null(colnames(x))) cnames<-as.character(1:datadim[2])
  else cnames<-colnames(x)

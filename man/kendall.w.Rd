@@ -5,7 +5,7 @@
  calculates Kendall's W coefficient of concordance
 }
 \usage{
-kendall.w(x,lambda,descending=TRUE,ranks=FALSE)
+ kendall.w(x,lambda,descending=TRUE,ranks=FALSE)
 }
 \arguments{
   \item{x}{matrix of scores or ranks}

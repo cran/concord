@@ -34,7 +34,7 @@ scores.to.counts<-function(scores) {
 cohen.kappa<-function(classif,type=c("score","count")) {
  if(missing(classif))
   stop("Usage: cohen.kappa(classif, type=\"score\")\n")
- if(is.character(classif))
+ if(!is.numeric(classif))
   classif<-apply(apply(classif,2,as.factor),2,as.numeric)
  if(type[1] == "score") classif.mat<-scores.to.counts(classif)
  else classif.mat<-as.matrix(classif)
@@ -61,7 +61,7 @@ cohen.kappa<-function(classif,type=c("score","count")) {
    PEc<-NA
   }
   else {
-   pj<-apply(apply(classif,2,tabulate)/N,1,prod)
+   pj<-apply(apply(classif,2,tabulate,nbins=ncat)/N,1,prod)
    PEc<-sum(pj)
   }
  }
@@ -109,7 +109,7 @@ print.cohen.kappa<-function(x,...) {
 # wtpc calculates the weighted percentages using the following formula:
 # <weighted pc><-(100/<n methods>)*<n ratings>/<n data objects>
 # The format of the data is the same as that used for calculating the
-# kappa for nominal data kappa.nom()
+# kappa for nominal data cohen.kappa()
 
 wtpc<-function(x,n.methods,n.objects,type=c("count","score")) {
  if(!missing(x) && !missing(n.methods) && !missing(n.objects)) {

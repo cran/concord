@@ -2,7 +2,8 @@
 \alias{print.kendall.w}
 \title{displays Kendall's W information}
 \description{
- prints the W coefficient, associated probability and optionally table of ranks
+ prints the W coefficient, associated probability and optionally a table of 
+ ranks
 }
 \usage{
  print.kendall.w(x,...)
