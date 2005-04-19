@@ -15,7 +15,7 @@
  \code{BEZ} calculates a Z score approximation of the probability that the
  deviation of the mean rank scores from the contrast coefficient vector would
  occur given randomly allocated ranks. It is only useful in conjuction with
- the /code{kendall.w} function.
+ the \code{kendall.w} function.
 }
 \value{
   \item{Z}{Z score}

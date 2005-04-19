@@ -23,7 +23,8 @@ coincidence.matrix<-function(x) {
   }
  }
  nmv<-sum(apply(cm,2,sum))
- return(list(statistic=NA,coincidence.matrix=cm,data.values=levx,nmatchval=nmv))
+ return(list(statistic=NA,coincidence.matrix=cm,data.values=levx,nmatchval=nmv,
+  data.level=NA))
 }
 
 # calculates Krippendorff's alpha
@@ -81,7 +82,7 @@ kripp.alpha<-function(x,method="nominal") {
 
 print.kripp.alpha<-function(x,...) {
  ka.label<-
-  paste("\nKrippendorff's alpha (data level - ",cm$data.level,") =",
+  paste("\nKrippendorff's alpha (data level - ",x$data.level,") =",
    sep="",collapse="")
  cat(ka.label,x$statistic,"\n\n")
 }

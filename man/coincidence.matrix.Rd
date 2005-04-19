@@ -20,6 +20,7 @@ coincidence.matrix(x)
    used in the calculation of alpha}
   \item{data.values}{a character vector of the original data values}
   \item{nmatchval}{the count of matches, used in calculation}
+  \item{data.level}{the data level is specified by \code{kripp.alpha}}
 }
 \references{Krippendorff, K. (1980) Content analysis: An introduction to
  its methodology. Beverly Hills, CA: Sage.}

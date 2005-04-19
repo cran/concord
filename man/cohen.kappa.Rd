@@ -40,19 +40,21 @@ cohen.kappa(classif, type=c("score","count"))
   \item{psc}{the probability for Zsc}
 }
 \references{
- {Byrt, T., Bishop, J. & Carlin, J.B. (1993) Bias, Prevalence and Kappa.
-  Journal of Clinical Epidemiology, 46(5): 423-429.}
- {Cohen, J. (1960) A coefficient of agreement for nominal scales.
-  Educational and Psychological Measurement, 20: 37-46.}
- {Siegel, S. & Castellan, N.J.Jr. (1988) Nonparametric
- statistics for the behavioral sciences. Boston, MA: McGraw-Hill.}
+ Byrt, T., Bishop, J. & Carlin, J.B. (1993) Bias, Prevalence and Kappa.
+  Journal of Clinical Epidemiology, 46(5): 423-429.
+  
+ Cohen, J. (1960) A coefficient of agreement for nominal scales.
+  Educational and Psychological Measurement, 20: 37-46.
+  
+ Siegel, S. & Castellan, N.J.Jr. (1988) Nonparametric
+ statistics for the behavioral sciences. Boston, MA: McGraw-Hill.
 }
 \author{Jim Lemon}
 \note{This is sometimes called Cohen's kappa. The name also avoids confusion
  with the kappa estimate of the conditioning number of a matrix. For a 
  contingency table version of this statistic, see \code{classAgreement}
  in package e1071}
-\seealso{\code{\link{scores.to.counts}},\code{\link{wtpc}}}
+\seealso{\code{\link{scores.to.counts}}, \code{\link{wtpc}}}
 \examples{
  # the "C" data from Krippendorff
  nmm<-matrix(c(1,1,NA,1,2,2,3,2,3,3,3,3,3,3,3,3,2,2,2,2,1,2,3,4,4,4,4,4,
