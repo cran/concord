@@ -1,8 +1,9 @@
 \name{print.page.trend.test}
 \alias{print.page.trend.test}
-\title{prints kappa reliability coefficient for nominal data}
+\title{prints the L statistic for Page's trend test}
 \description{
- prints the kappa coefficient and associated probability
+ prints the obtained L statistic and the associated probability for the normal
+ approximation if the sample sized is sufficiently large
 }
 \usage{
  print.page.trend.test(x,...)

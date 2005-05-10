@@ -5,7 +5,7 @@
  calculates the alpha coefficient of reliability proposed by Krippendorff
 }
 \usage{
- kripp.alpha(x, method="nominal"))
+ kripp.alpha(x, method="nominal")
 }
 \arguments{
   \item{x}{classifier by object matrix of classifications}

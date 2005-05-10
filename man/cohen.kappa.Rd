@@ -5,7 +5,7 @@
  calculates the kappa coefficient of reliability for nominal data
 }
 \usage{
-cohen.kappa(classif, type=c("score","count"))
+cohen.kappa(classif,type=c("score","count"))
 }
 \arguments{
   \item{classif}{matrix of classification counts or scores}
