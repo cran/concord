@@ -43,7 +43,7 @@ page.trend.test<-function(x) {
   Lval<-page.crit3[dimx[1]-1,]
  p.table<-
   ifelse(L > Lval[1],ifelse(L > Lval[2],ifelse(L > Lval[3],"<=.001","<=.01"),"<=.05"),"NS")
- print(Lval)
+ # print(Lval)
  # if there was no tabled value, calculate the normal approximation
  if(length(Lval)<2) {
   munum<-dimx[1]*dimx[2]*(dimx[2]+1)*(dimx[2]+1)
