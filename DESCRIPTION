@@ -1,5 +1,5 @@
 Package: concord
-Version: 1.4-6
+Version: 1.4-7
 Date: 2006-08-15
 Title: Concordance and reliability
 Author: Jim Lemon <jim@bitwrit.com.au>,
@@ -7,4 +7,4 @@ Author: Jim Lemon <jim@bitwrit.com.au>,
 Maintainer: Jim Lemon <jim@bitwrit.com.au>
 Description: Measures of concordance and reliability
 License: GPL Version 2 or later.
-Packaged: Sun Aug 20 22:08:57 2006; hornik
+Packaged: Mon Sep 18 21:25:03 2006; hornik
