@@ -1,3 +1,4 @@
+N.cohen.kappa		calculate sample size for cohen.kappa
 coincidence.matrix	calculate the coincidence matrix for kripp.alpha
 cohen.kappa		Concordance of methods for nominal data (Cohen's)
 kripp.alpha		Krippendorff's alpha
