@@ -3,6 +3,8 @@ coincidence.matrix	calculate the coincidence matrix for kripp.alpha
 cohen.kappa		Concordance of methods for nominal data (Cohen's)
 kripp.alpha		Krippendorff's alpha
 mcnemar.mh		calculates McNemar's coefficient of rater concordance
+print.quest.reliability	Print results from quest.reliability
+quest.reliability	Common measures of questionnaire reliability
 rater.bias		calculates a coefficient of inter rater bias
 scores.to.counts	convert rater's category scores to category counts
 stuart.maxwell.mh	calculates rater concordance for >2 categories

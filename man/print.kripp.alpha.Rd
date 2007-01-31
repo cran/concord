@@ -5,7 +5,7 @@
  prints the Krippendorff's alpha coefficient
 }
 \usage{
- print.kripp.alpha(x,...)
+ \method{print}{kripp.alpha}(x,...)
 }
 \arguments{
  \item{x}{an object of class "kripp.alpha" returned from \code{kripp.alpha}}

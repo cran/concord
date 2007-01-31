@@ -35,9 +35,9 @@ BEZ <- function (rankarray,lambda) {
 # rows are scoring or ranking methods and columns are data objects
 
 kendall.w <- function (x,lambda=NULL,descending=TRUE,ranks=FALSE) {
- if (missing(x))
+ if(missing(x))
   stop("Usage: kendall.w(x,lambda=NULL,descending=TRUE,ranks=FALSE)")
- if (!is.data.frame(x) && !is.matrix(x))
+ if(!is.data.frame(x) && !is.matrix(x))
   stop("x must be a dataframe or matrix")
  # lookup table for alpha=0.01 critical values for Kendall's W
  # lookup for small N and k starts at [3,3], so use offset of -2 to read
@@ -58,6 +58,7 @@ kendall.w <- function (x,lambda=NULL,descending=TRUE,ranks=FALSE) {
     .624,.484,.395,.333,.29,.253,.228,.204,.19,.176,.163,.15,.137,.13,.123,.116,.109,.103),
     nrow=5,byrow=TRUE)
  datadim<-dim(x)
+ if(min(datadim) < 3) stop("x must be at least 3x3")
  if(is.null(colnames(x))) cnames<-as.character(1:datadim[2])
  else cnames<-colnames(x)
  if(!is.null(lambda)) max.lambda.len<-max(nchar(unlist(lambda)))

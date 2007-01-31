@@ -6,7 +6,7 @@
  approximation if the sample sized is sufficiently large
 }
 \usage{
- print.page.trend.test(x,...)
+ \method{print}{page.trend.test}(x,...)
 }
 \arguments{
  \item{x}{an object returned from \code{page.trend.test}}

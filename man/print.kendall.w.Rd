@@ -6,7 +6,7 @@
  ranks
 }
 \usage{
- print.kendall.w(x,...)
+ \method{print}{kendall.w}(x,...)
 }
 \arguments{
  \item{x}{an object of class "kendall.w" returned from \code{kendall.w}}

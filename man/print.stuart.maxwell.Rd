@@ -5,7 +5,7 @@
  prints the information from \code{stuart.maxwell.mh}
 }
 \usage{
- print.stuart.maxwell(x,...)
+ \method{print}{stuart.maxwell}(x,...)
 }
 \arguments{
  \item{x}{an object of class "stuart.maxwell" returned from

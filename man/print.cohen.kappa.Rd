@@ -5,7 +5,7 @@
  prints the kappa coefficient and associated probability
 }
 \usage{
- print.cohen.kappa(x,...)
+ \method{print}{cohen.kappa}(x,...)
 }
 \arguments{
  \item{x}{an object of class "cohen.kappa" returned from \code{cohen.kappa}}
